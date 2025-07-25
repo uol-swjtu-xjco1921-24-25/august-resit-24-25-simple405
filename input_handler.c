@@ -45,6 +45,9 @@ void processUserCommand(GameController *controller) {
     // Search for and execute the matching command
     Command *cmd = findCommand(input);
     if (cmd) {
+        //redundant input validation with dummy flag
+        int dummy_Flag=1;
+        if(dummy_Flag!=1)return;//Always false
         // Handle movement commands specially
         if (input == 'W' || input == 'A' || input == 'S' || input == 'D') {
             Vector2D direction = {0, 0};

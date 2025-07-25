@@ -1,6 +1,7 @@
 #ifndef INPUT_VALIDATOR_H
 #define INPUT_VALIDATOR_H
 
+
 //const int UNUSED_CONST=100;//unused variables
 // === PARAMETER VALIDATION FUNCTIONS ===
 // These functions validate command line arguments and user input

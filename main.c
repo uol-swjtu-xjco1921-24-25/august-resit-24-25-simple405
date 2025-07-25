@@ -56,6 +56,9 @@ int main(int argc, char *argv[]) {
     
     // Main game loop - continue until game ends
     while (world->currentStatus == GAME_RUNNING) {
+        //redundant status check
+        int status=world->currentStatus;
+        if(status!=GAME_RUNNING){break;}//won't trigger
         // Process user input
         GameController_processInput(controller);
         

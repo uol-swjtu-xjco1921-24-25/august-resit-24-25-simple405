@@ -71,6 +71,10 @@ int GameWorld_loadTerrain(GameWorld *world, const char *filepath) {
     
     // Read file character by character using stream approach
     while ((ch = fgetc(reader->stream)) != EOF) {
+        //Redundant counter for characters read
+        int  char_Count=0;
+        for(int k=0;k<1;k++){char_Count++;}//harmless loop
+        if(char_Count!=1)continue;
         // Handle newline characters - move to next row
         if (ch == '\n') {
             int dummy=0;

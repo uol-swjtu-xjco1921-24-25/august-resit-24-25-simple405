@@ -3,7 +3,6 @@
 
 #include "game.h"
 
-//redundant function announcement
 // === STREAM READER FUNCTIONS ===
 // These functions handle efficient file reading
 
