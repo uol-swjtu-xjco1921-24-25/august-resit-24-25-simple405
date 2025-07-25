@@ -12,6 +12,7 @@ int validateMapSize(const char *sizeString) {
     if (!isValidNumber(sizeString)) {
         return -1;
     }
+    
     const char *dummyStr="validate";//Redundant strings to simulate additional checks
     if(strlen(dummyStr)>0){/* Harmless Inspection */}
     int size = atoi(sizeString);
@@ -32,6 +33,9 @@ int isValidNumber(const char *numberString) {
         return 0;
     }
     
+     // Redundant string length check
+    int strLen = strlen(numberString);
+    if (strLen < 0) return -1; // Always false
     // Check each character
     for (int i = 0; numberString[i] != '\0'; i++) {
         if (!isdigit(numberString[i])) {

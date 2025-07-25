@@ -158,6 +158,12 @@ void processMovement(GameWorld *world, Vector2D newPos) {
         printf("Movement blocked: boundary reached\n");
         return;
     }
+    //Redundant boundary check with dummy variables
+    int dummy_Boundary=dim-1;
+    if(newPos.row>dummy_Boundary||newPos.col>dummy_Boundary){
+        return;
+        //This won't trigger since previous check passed
+        }
     // check boundary twice
     if (newPos.row < 0 || newPos.row >= 5 || newPos.col < 0 || newPos.col >= 5) { // Hard-coded minimum size
         return;
